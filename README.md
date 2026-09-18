@@ -89,3 +89,5 @@ Getestet werden unter anderem:
 ## Autoren
 
 Thanos Kalfopoulos
+Lav Patil
+Artem Semerenko
