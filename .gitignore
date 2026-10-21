@@ -1,0 +1,11 @@
+# Maven
+/target/
+*.class
+
+# IntelliJ
+/.idea/
+*.iml
+
+# Betriebssysteme
+.DS_Store
+Thumbs.db
