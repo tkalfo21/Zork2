@@ -41,4 +41,9 @@ public class CommandWordsTest {
         CommandWords commands = new CommandWords();
         assertFalse(commands.isCommand("hello"));
     }
+    @Test
+    public void testInvalidCommand2() {
+        CommandWords commands = new CommandWords();
+        assertFalse(commands.isCommand("goo"));
+    }
 }
