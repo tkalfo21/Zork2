@@ -32,7 +32,7 @@ public class ItemTest {
 
     @Test
     public void testToStringName() {
-        Item item = new Item("book", 0.5);
+        Item item = new Item("antique_book", 0.5);
         assertTrue(item.toString().contains("book"));
     }
 
