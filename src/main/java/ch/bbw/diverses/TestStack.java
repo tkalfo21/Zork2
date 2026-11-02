@@ -10,7 +10,7 @@ public class TestStack {
 		
 		stack.push("Hello");
 		stack.push("World");
-		stack.push("how are you");
+		stack.push("How are you?");
 		
 		String cmd = stack.pop();
 		System.out.println(cmd);
