@@ -12,10 +12,25 @@ class Game {
     -Room currentRoom
     -ArrayList~Room~ rooms
     -Stack~Room~ previousRooms
-    -ArrayList~Item~ inventory
-    -double maxWeight
+    -Inventory inventory
+    -MapPrinter mapPrinter
     +Game()
     +play()
+}
+
+class Inventory {
+    -ArrayList~Item~ items
+    -double maxWeight
+    +Inventory(double maxWeight)
+    +getTotalWeight() double
+    +canCarry(Item item) boolean
+    +take(Room room, String name) String
+    +drop(Room room, String name) String
+    +description() String
+}
+
+class MapPrinter {
+    +render(List~Room~ rooms, Room currentRoom) String
 }
 
 class Room {
@@ -73,7 +88,11 @@ class CommandWords {
 Zork2 --> Game
 Game --> Parser
 Game --> Room
-Game --> Item
+Game --> Inventory
+Game --> MapPrinter
+Inventory --> Item
+Inventory --> Room
+MapPrinter --> Room
 Parser --> Command
 Parser --> CommandWords
 Room --> Item
