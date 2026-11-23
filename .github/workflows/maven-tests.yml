@@ -1,0 +1,22 @@
+name: Maven-Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Quellcode herunterladen
+        uses: actions/checkout@v4
+      - name: Java einrichten
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: JUnit-Tests ausführen
+        run: mvn --batch-mode clean test
